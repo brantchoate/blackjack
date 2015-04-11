@@ -7,6 +7,8 @@
     <script src="lib/jquery.js"></script>
     <script src="lib/underscore.js"></script>
     <script src="lib/backbone.js"></script>
+    <script src="bower_components/velocity/velocity.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/velocity/1.2.2/velocity.ui.min.js"></script>
 
     <script src="compiled/src/models/Card.js"></script>
     <script src="compiled/src/collections/Hand.js"></script>
@@ -18,5 +20,10 @@
     <script src="compiled/src/views/AppView.js"></script>
 
     <script src="compiled/src/main.js"></script>
+
+    <script>
+      $('img').velocity("transition.slideLeftIn", {stagger: 250});
+    </script>
+
   </body>
 </html>

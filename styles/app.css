@@ -1,16 +1,24 @@
 .card {
   float: left;
-  border: solid 1px black;
-  width: 100px;
-  border-radius: 5px;
-  height: 140px;
+  width:300px;
   margin-right: 20px;
 }
 
-.covered {
-  background-color: black;
+.player-hand-container {
+  float:left;
+  width:100%;
+  height: 400px;
 }
 
-.hand {
-  overflow: auto;
+.dealer-hand-container {
+  float:left;
+  width:100%;
 }
+
+
+img {
+  margin-top:-400px;
+}
+/*.hand {
+  overflow: auto;
+}*/

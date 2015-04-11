@@ -18,14 +18,13 @@ class window.AppView extends Backbone.View
           .models[0]
           .flip()
           storage = @getHands()
-        if @model.get 'dealerHand'
+        while @model.get 'dealerHand'
           .minScore() <= 15
             @model.get 'dealerHand'
             .hit()
             storage = @getHands()
-            undefined
+        console.log storage
       ,@
-    console.log storage
     @render()
 
   getHands: ->
