@@ -11,5 +11,13 @@ describe 'deck', ->
   describe 'hit', ->
     it 'should give the last card from the deck', ->
       assert.strictEqual deck.length, 50
-      assert.strictEqual deck.last(), hand.hit()
+      debugger;
+      assert.strictEqual deck.last().cid, hand.hit().models[hand.models.length - 1].cid
       assert.strictEqual deck.length, 49
+###
+  beforeEach ->
+    deck = new Deck()
+  describe 'checkHand', ->
+    it 'should check if a dealer\'s hand is under 13', ->
+      assert.strictEqual hand
+###

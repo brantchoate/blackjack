@@ -10,7 +10,41 @@ class window.AppView extends Backbone.View
     'click .stand-button': -> @model.get('playerHand').stand()
 
   initialize: ->
+    # on stand @model.get('dealerHand').hit()
+    storage = ''
+    @model.get 'playerHand'
+      .on 'stand', ->
+        @model.get 'dealerHand'
+          .models[0]
+          .flip()
+          storage = @getHands()
+        if @model.get 'dealerHand'
+          .minScore() <= 15
+            @model.get 'dealerHand'
+            .hit()
+            storage = @getHands()
+            undefined
+      ,@
+    console.log storage
     @render()
+
+  getHands: ->
+    player = @model
+        .get 'playerHand'
+        .minScore()
+    dealer = @model
+        .get 'dealerHand'
+        .minScore()
+    if player > 21
+      "dealer wins"
+    else if dealer > 21
+      "player wins"
+    else if dealer > player
+      "dealer wins"
+    else if player > dealer
+      "player wins"
+    else
+      "tie game"
 
   render: ->
     @$el.children().detach()
