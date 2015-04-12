@@ -1,0 +1,22 @@
+{
+  "name": "2015-03-blackjack",
+  "version": "0.0.0",
+  "homepage": "https://github.com/DaveDH2/2015-03-blackjack",
+  "authors": [
+    "Hack Reactor Students <accounts@hackreactor.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "velocity": "~1.2.2"
+  }
+}

@@ -1,7 +1,32 @@
+body {
+  font-family: "Oswald";
+}
+
+.wins {
+  opacity: 0;
+  position: absolute;
+  left: 810px;
+}
 .card {
   float: left;
   width:300px;
-  margin-right: 20px;
+  margin-right: -255px;
+}
+
+.covered {
+  fill: red;
+}
+
+.hit-button, .stand-button {
+  position: fixed;
+  z-index: 99;
+}
+
+.hit-button {
+  margin-left:20px;
+}
+.stand-button {
+  margin-left:60px;
 }
 
 .player-hand-container {
@@ -15,6 +40,11 @@
   width:100%;
 }
 
+.outcome {
+  position: absolute;
+  top: 100;
+  z-index: 9999;
+}
 
 img {
   margin-top:-400px;

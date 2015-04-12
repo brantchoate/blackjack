@@ -1,7 +1,9 @@
 <html>
   <head>
     <title>Blackjack</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href="styles/app.css" rel="stylesheet" type="text/css" media="screen">
+
   </head>
   <body>
     <script src="lib/jquery.js"></script>
@@ -23,6 +25,13 @@
 
     <script>
       $('img').velocity("transition.slideLeftIn", {stagger: 250});
+      var mySequence = [
+          { e: $('.outcome'), p: {scale: 2, translateX: "220px"}, o: { duration: 1000 } },
+          { e: $('.wins'), p: {scale: 4, translateY: "50px", opacity: 1}, o: { duration: 1000 } }
+      ];
+      $('.stand-button').on('click', function(){
+        $.Velocity.RunSequence(mySequence);
+      })
     </script>
 
   </body>
